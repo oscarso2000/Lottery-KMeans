@@ -3,14 +3,14 @@ import pandas as pd
 from matplotlib import pyplot as plt
 
 # Importing the dataset
-data = pd.read_csv('Lottery_Mega_Millions_Winning_Numbers__Beginning_2002.csv')
+data = pd.read_csv('iris.csv')
 print(data.shape)
 
 # Getting the values and plotting it
-x = data['Multiplier'].values
-y = data['Mega Ball'].values
+x = data['sepal_length'].values
+y = data['sepal_width'].values
 X = np.array(list(zip(x, y)))
-plt.scatter(x, y, c='black', s=1)
+plt.scatter(x, y)
 plt.show()
 
 
